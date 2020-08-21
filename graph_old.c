@@ -13,42 +13,27 @@ void graph() {
 
    Float_t energy[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t energyerror[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t mean[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t meanerror[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rms[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rmserror[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t mean_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t meanerror_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rms_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rmserror_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t mean_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t meanerror_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rms_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rmserror_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t mean_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t meanerror_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rms_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rmserror_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t mean_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t meanerror_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rms_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rmserror_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t mean_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t meanerror_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rms_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rmserror_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t mean_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t meanerror_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rms_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t rmserror_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+     
+   Float_t mean90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t rms90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t mean95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t rms95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    
    Float_t mean_mean[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rms_mean[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t mean_meanerror[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -59,7 +44,7 @@ void graph() {
    Float_t rms_sigmaerror[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t mean_chi[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t rms_chi[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t ratio_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_stat_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_sys_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -68,7 +53,7 @@ void graph() {
    Float_t resolution_error_stat_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_sys_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_hist[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t ratio_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_stat_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_sys_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -77,7 +62,7 @@ void graph() {
    Float_t resolution_error_stat_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_sys_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_hist90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
+    
    Float_t ratio_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_stat_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t ratio_error_sys_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -86,42 +71,24 @@ void graph() {
    Float_t resolution_error_stat_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_sys_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t resolution_error_hist95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    
+   Float_t ratio90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error_stat90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error_sys90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error_stat90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error_sys90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error90[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    
-   Float_t ratio_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_stat_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_sys_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_stat_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_sys_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_hist96[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t ratio_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_stat_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_sys_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_stat_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_sys_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_hist97[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t ratio_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_stat_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_sys_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_stat_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_sys_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_hist98[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   
-   Float_t ratio_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_stat_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_sys_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t ratio_error_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_stat_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_sys_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-   Float_t resolution_error_hist99[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error_stat95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error_sys95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t ratio_error95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error_stat95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error_sys95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+   Float_t resolution_error95[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    
    Float_t linearity_error[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
    Float_t absolute_error[n] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -138,11 +105,16 @@ void graph() {
    if ( !(long)file1 ) return;
 
   for ( int i = 0; i < n; i++ ) {
-    fscanf( file1, "%f %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E\n", &energy[i], &mean_hist90[i], &meanerror_hist90[i], &rms_hist90[i], &rmserror_hist90[i], &mean_hist95[i], &meanerror_hist95[i], &rms_hist95[i], &rmserror_hist95[i], &mean_hist96[i], &meanerror_hist96[i], &rms_hist96[i], &rmserror_hist96[i], &mean_hist97[i], &meanerror_hist97[i], &rms_hist97[i], &rmserror_hist97[i], &mean_hist98[i], &meanerror_hist98[i], &rms_hist98[i], &rmserror_hist98[i], &mean_hist99[i], &meanerror_hist99[i], &rms_hist99[i], &rmserror_hist99[i], &mean[i], &meanerror[i], &rms[i], &rmserror[i], &mean_mean[i], &mean_meanerror[i], &mean_sigma[i], &mean_sigmaerror[i], &mean_chi[i] );
+    fscanf( file1, "%f %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E %E\n", &energy[i], &mean_hist90[i], &meanerror_hist90[i], &rms_hist90[i], &rmserror_hist90[i], &mean_hist95[i], &meanerror_hist95[i], &rms_hist95[i], &rmserror_hist95[i], &mean90[i], &rms90[i], &mean95[i], &rms95[i], &mean[i], &meanerror[i], &rms[i], &rmserror[i], &mean_mean[i], &mean_meanerror[i], &mean_sigma[i], &mean_sigmaerror[i], &mean_chi[i] );
     if ( feof( file1 ) ) break;
   }
  
   for ( int i = 0; i < n; i++ ) {
+
+    //linearity_error[ i ] = sqrt( ( pow( mean_meanerror[ i ], 2 ) ) + ( pow( rms_mean[ i ], 2 ) ) );
+    //absolute_error[ i ] = sqrt( ( pow( mean_sigmaerror[ i ], 2 ) ) + ( pow( rms_sigma[ i ], 2 ) ) );
+    //linearity_error2[ i ] = sqrt( ( pow( mean_meanerror2[ i ], 2 ) ) + ( pow( rms_mean2[ i ], 2 ) ) );
+    //absolute_error2[ i ] = sqrt( ( pow( mean_sigmaerror2[ i ], 2 ) ) + ( pow( rms_sigma2[ i ], 2 ) ) );
 
     ratio_hist[ i ] = ( mean[i] - energy[i] ) / energy[i];
     ratio_error_stat_hist[ i ] = sqrt( pow( (meanerror[i]) / (energy[i]), 2 ) + pow( (mean[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
@@ -158,26 +130,15 @@ void graph() {
     ratio_error_stat_hist95[ i ] = sqrt( pow( (meanerror_hist95[i]) / (energy[i]), 2 ) + pow( (mean_hist95[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
     ratio_error_sys_hist95[ i ] = 0.0;
     ratio_error_hist95[ i ] = sqrt( ( pow( ratio_error_stat_hist95[ i ], 2 ) ) + ( pow( ratio_error_sys_hist95[ i ], 2 ) ) );
-      
-    ratio_hist96[ i ] = ( mean_hist96[i] - energy[i] ) / energy[i];
-    ratio_error_stat_hist96[ i ] = sqrt( pow( (meanerror_hist96[i]) / (energy[i]), 2 ) + pow( (mean_hist96[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
-    ratio_error_sys_hist96[ i ] = 0.0;
-    ratio_error_hist96[ i ] = sqrt( ( pow( ratio_error_stat_hist96[ i ], 2 ) ) + ( pow( ratio_error_sys_hist96[ i ], 2 ) ) );
-      
-    ratio_hist97[ i ] = ( mean_hist97[i] - energy[i] ) / energy[i];
-    ratio_error_stat_hist97[ i ] = sqrt( pow( (meanerror_hist97[i]) / (energy[i]), 2 ) + pow( (mean_hist97[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
-    ratio_error_sys_hist97[ i ] = 0.0;
-    ratio_error_hist97[ i ] = sqrt( ( pow( ratio_error_stat_hist97[ i ], 2 ) ) + ( pow( ratio_error_sys_hist97[ i ], 2 ) ) );
-      
-    ratio_hist98[ i ] = ( mean_hist98[i] - energy[i] ) / energy[i];
-    ratio_error_stat_hist98[ i ] = sqrt( pow( (meanerror_hist98[i]) / (energy[i]), 2 ) + pow( (mean_hist98[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
-    ratio_error_sys_hist98[ i ] = 0.0;
-    ratio_error_hist98[ i ] = sqrt( ( pow( ratio_error_stat_hist98[ i ], 2 ) ) + ( pow( ratio_error_sys_hist98[ i ], 2 ) ) );
-      
-    ratio_hist99[ i ] = ( mean_hist99[i] - energy[i] ) / energy[i];
-    ratio_error_stat_hist99[ i ] = sqrt( pow( (meanerror_hist99[i]) / (energy[i]), 2 ) + pow( (mean_hist99[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
-    ratio_error_sys_hist99[ i ] = 0.0;
-    ratio_error_hist99[ i ] = sqrt( ( pow( ratio_error_stat_hist99[ i ], 2 ) ) + ( pow( ratio_error_sys_hist99[ i ], 2 ) ) );
+
+    ratio90[ i ] = ( mean90[i] - energy[i] ) / energy[i];
+    ratio_error_stat90[ i ] = 0.0;
+    ratio_error_sys90[ i ] = 0.0;
+    ratio_error90[ i ] = sqrt( ( pow( ratio_error_stat90[ i ], 2 ) ) + ( pow( ratio_error_sys90[ i ], 2 ) ) );
+    ratio95[ i ] = ( mean95[i] - energy[i] ) / energy[i];
+    ratio_error_stat95[ i ] = 0.0;
+    ratio_error_sys95[ i ] = 0.0;
+    ratio_error95[ i ] = sqrt( ( pow( ratio_error_stat95[ i ], 2 ) ) + ( pow( ratio_error_sys95[ i ], 2 ) ) );
     
     ratio[ i ] = ( mean_mean[i] - energy[i] ) / energy[i];
     ratio_error_stat[ i ] = sqrt( pow( (mean_meanerror[i]) / (energy[i]), 2 ) + pow( (mean_mean[i] * energyerror[i]) / (energy[i] * energy[i]), 2 ) );
@@ -198,26 +159,16 @@ void graph() {
     resolution_error_stat_hist95[ i ] = sqrt( pow( (rmserror_hist95[i]) / (mean_hist95[i]), 2 ) + pow( (rms_hist95[i] * meanerror_hist95[i]) / (mean_hist95[i] * mean_hist95[i]), 2 ) );
     resolution_error_sys_hist95[ i ] = 0.0;
     resolution_error_hist95[ i ] = sqrt( ( pow( resolution_error_stat_hist95[ i ], 2 ) ) + ( pow( resolution_error_sys_hist95[ i ], 2 ) ) );
-      
-    resolution_hist96[ i ] = rms_hist96[i] / mean_hist96[i];
-    resolution_error_stat_hist96[ i ] = sqrt( pow( (rmserror_hist96[i]) / (mean_hist96[i]), 2 ) + pow( (rms_hist96[i] * meanerror_hist96[i]) / (mean_hist96[i] * mean_hist96[i]), 2 ) );
-    resolution_error_sys_hist96[ i ] = 0.0;
-    resolution_error_hist96[ i ] = sqrt( ( pow( resolution_error_stat_hist96[ i ], 2 ) ) + ( pow( resolution_error_sys_hist96[ i ], 2 ) ) );
-      
-    resolution_hist97[ i ] = rms_hist97[i] / mean_hist97[i];
-    resolution_error_stat_hist97[ i ] = sqrt( pow( (rmserror_hist97[i]) / (mean_hist97[i]), 2 ) + pow( (rms_hist97[i] * meanerror_hist97[i]) / (mean_hist97[i] * mean_hist97[i]), 2 ) );
-    resolution_error_sys_hist97[ i ] = 0.0;
-    resolution_error_hist97[ i ] = sqrt( ( pow( resolution_error_stat_hist97[ i ], 2 ) ) + ( pow( resolution_error_sys_hist97[ i ], 2 ) ) );
-      
-    resolution_hist98[ i ] = rms_hist98[i] / mean_hist98[i];
-    resolution_error_stat_hist98[ i ] = sqrt( pow( (rmserror_hist98[i]) / (mean_hist98[i]), 2 ) + pow( (rms_hist98[i] * meanerror_hist98[i]) / (mean_hist98[i] * mean_hist98[i]), 2 ) );
-    resolution_error_sys_hist98[ i ] = 0.0;
-    resolution_error_hist98[ i ] = sqrt( ( pow( resolution_error_stat_hist98[ i ], 2 ) ) + ( pow( resolution_error_sys_hist98[ i ], 2 ) ) );
-      
-    resolution_hist99[ i ] = rms_hist99[i] / mean_hist99[i];
-    resolution_error_stat_hist99[ i ] = sqrt( pow( (rmserror_hist99[i]) / (mean_hist99[i]), 2 ) + pow( (rms_hist99[i] * meanerror_hist99[i]) / (mean_hist99[i] * mean_hist99[i]), 2 ) );
-    resolution_error_sys_hist99[ i ] = 0.0;
-    resolution_error_hist99[ i ] = sqrt( ( pow( resolution_error_stat_hist99[ i ], 2 ) ) + ( pow( resolution_error_sys_hist99[ i ], 2 ) ) );
+    
+    resolution90[ i ] = rms90[i] / mean90[i];
+    resolution_error_stat90[ i ] = 0.0;
+    resolution_error_sys90[ i ] = 0.0;
+    resolution_error90[ i ] = sqrt( ( pow( resolution_error_stat90[ i ], 2 ) ) + ( pow( resolution_error_sys90[ i ], 2 ) ) );
+    
+    resolution95[ i ] = rms95[i] / mean95[i];
+    resolution_error_stat95[ i ] = 0.0;
+    resolution_error_sys95[ i ] = 0.0;
+    resolution_error95[ i ] = sqrt( ( pow( resolution_error_stat95[ i ], 2 ) ) + ( pow( resolution_error_sys95[ i ], 2 ) ) );
 
     resolution[ i ] = mean_sigma[i] / mean_mean[i];
     resolution_error_stat[ i ] = sqrt( pow( (mean_sigmaerror[i]) / (mean_mean[i]), 2 ) + pow( (mean_sigma[i] * mean_meanerror[i]) / (mean_mean[i] * mean_mean[i]), 2 ) );
@@ -225,6 +176,7 @@ void graph() {
     resolution_error[ i ] = sqrt( ( pow( resolution_error_stat[ i ], 2 ) ) + ( pow( resolution_error_sys[ i ], 2 ) ) );
     
   }
+    
     
 /*    printf( "\n" );
     for (int i = 0; i < n; i++) {
@@ -262,8 +214,11 @@ void graph() {
       printf( "\n" );
       printf( "\n" );
       printf( "\n" );
+
     }
 */
+    
+    
    printf( "\n" );
    for (int i = 0; i < n; i++) {
      printf( " %f ", energy[i] );
@@ -283,26 +238,11 @@ void graph() {
      printf( " %f ", meanerror_hist95[i] );
      printf( " %f ", rms_hist95[i] );
      printf( " %f ", rmserror_hist95[i] );
-       
-     printf( " %f ", mean_hist96[i] );
-     printf( " %f ", meanerror_hist96[i] );
-     printf( " %f ", rms_hist96[i] );
-     printf( " %f ", rmserror_hist96[i] );
-       
-     printf( " %f ", mean_hist97[i] );
-     printf( " %f ", meanerror_hist97[i] );
-     printf( " %f ", rms_hist97[i] );
-     printf( " %f ", rmserror_hist97[i] );
-       
-     printf( " %f ", mean_hist98[i] );
-     printf( " %f ", meanerror_hist98[i] );
-     printf( " %f ", rms_hist98[i] );
-     printf( " %f ", rmserror_hist98[i] );
-       
-     printf( " %f ", mean_hist99[i] );
-     printf( " %f ", meanerror_hist99[i] );
-     printf( " %f ", rms_hist99[i] );
-     printf( " %f ", rmserror_hist99[i] );
+
+     printf( " %f ", mean90[i] );
+     printf( " %f ", rms90[i] );
+     printf( " %f ", mean95[i] );
+     printf( " %f ", rms95[i] );
        
      printf( " %f ", ratio_hist[i] );
      printf( " %f ", ratio_error_hist[i] );
@@ -318,26 +258,15 @@ void graph() {
      printf( " %f ", ratio_error_hist95[i] );
      printf( " %f ", resolution_hist95[i] );
      printf( " %f ", resolution_error_hist95[i] );
-       
-     printf( " %f ", ratio_hist96[i] );
-     printf( " %f ", ratio_error_hist96[i] );
-     printf( " %f ", resolution_hist96[i] );
-     printf( " %f ", resolution_error_hist96[i] );
-       
-     printf( " %f ", ratio_hist97[i] );
-     printf( " %f ", ratio_error_hist97[i] );
-     printf( " %f ", resolution_hist97[i] );
-     printf( " %f ", resolution_error_hist97[i] );
-       
-     printf( " %f ", ratio_hist98[i] );
-     printf( " %f ", ratio_error_hist98[i] );
-     printf( " %f ", resolution_hist98[i] );
-     printf( " %f ", resolution_error_hist98[i] );
-       
-     printf( " %f ", ratio_hist99[i] );
-     printf( " %f ", ratio_error_hist99[i] );
-     printf( " %f ", resolution_hist99[i] );
-     printf( " %f ", resolution_error_hist99[i] );
+     
+     printf( " %f ", ratio90[i] );
+     printf( " %f ", ratio_error90[i] );
+     printf( " %f ", resolution90[i] );
+     printf( " %f ", resolution_error90[i] );
+     printf( " %f ", ratio95[i] );
+     printf( " %f ", ratio_error95[i] );
+     printf( " %f ", resolution95[i] );
+     printf( " %f ", resolution_error95[i] );
      
      printf( " %f ", mean_mean[i] );
      printf( " %f ", rms_mean[i] );
@@ -357,6 +286,7 @@ void graph() {
      printf( "\n" );
      printf( "\n" );
      printf( "\n" );
+
    }
 
    TGraphErrors *agr;
@@ -370,18 +300,6 @@ void graph() {
     
    TGraphErrors *ggr;
    TGraphErrors *hgr;
-    
-   TGraphErrors *igr;
-   TGraphErrors *jgr;
-    
-   TGraphErrors *kgr;
-   TGraphErrors *lgr;
-    
-   TGraphErrors *mgr;
-   TGraphErrors *ngr;
-    
-   TGraphErrors *ogr;
-   TGraphErrors *pgr;
 
    char fname[ 100 ];
    for ( int i = 0; i < 100; i++ ) fname[ i ] = 0;
@@ -447,30 +365,6 @@ void graph() {
    hgr = new TGraphErrors( n, energy, ratio_hist, energyerror, ratio_error_stat_hist );
    hgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
    hgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   igr = new TGraphErrors( n, energy, ratio_hist96, energyerror, ratio_error_sys_hist96 );
-   igr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   igr->GetXaxis()->SetTitle("E_{true}, GeV");
-   jgr = new TGraphErrors( n, energy, ratio_hist96, energyerror, ratio_error_stat_hist96 );
-   jgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   jgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   kgr = new TGraphErrors( n, energy, ratio_hist97, energyerror, ratio_error_sys_hist97 );
-   kgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   kgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   lgr = new TGraphErrors( n, energy, ratio_hist97, energyerror, ratio_error_stat_hist97 );
-   lgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   lgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   mgr = new TGraphErrors( n, energy, ratio_hist98, energyerror, ratio_error_sys_hist98 );
-   mgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   mgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ngr = new TGraphErrors( n, energy, ratio_hist98, energyerror, ratio_error_stat_hist98 );
-   ngr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   ngr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ogr = new TGraphErrors( n, energy, ratio_hist99, energyerror, ratio_error_sys_hist99 );
-   ogr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   ogr->GetXaxis()->SetTitle("E_{true}, GeV");
-   pgr = new TGraphErrors( n, energy, ratio_hist99, energyerror, ratio_error_stat_hist99 );
-   pgr->GetYaxis()->SetTitle("( E_{reco} - E_{true} ) / E_{true}");
-   pgr->GetXaxis()->SetTitle("E_{true}, GeV");
    sprintf( fname, "Linearity" );
    agr->GetYaxis()->SetRangeUser(-0.2, 0.2);
    agr->SetTitle(fname);
@@ -527,58 +421,6 @@ void graph() {
    hgr->SetFillColor(kMagenta-10);
    hgr->SetMarkerStyle(20);
    hgr->Draw("P SAME");
-   igr->SetMarkerColor(kMagenta-10);
-   igr->SetFillStyle(3001);
-   igr->SetLineColor(kMagenta-10);
-   igr->SetLineWidth(3);
-   igr->SetFillColor(kMagenta-10);
-   igr->SetMarkerStyle(20);
-   igr->Draw("3 SAME");
-   jgr->SetMarkerColor(kCyan+1);
-   jgr->SetLineColor(kCyan+1);
-   jgr->SetLineWidth(3);
-   jgr->SetFillColor(kMagenta-10);
-   jgr->SetMarkerStyle(20);
-   jgr->Draw("P SAME");
-   kgr->SetMarkerColor(kMagenta-10);
-   kgr->SetFillStyle(3001);
-   kgr->SetLineColor(kMagenta-10);
-   kgr->SetLineWidth(3);
-   kgr->SetFillColor(kMagenta-10);
-   kgr->SetMarkerStyle(20);
-   kgr->Draw("3 SAME");
-   lgr->SetMarkerColor(kCyan+2);
-   lgr->SetLineColor(kCyan+2);
-   lgr->SetLineWidth(3);
-   lgr->SetFillColor(kMagenta-10);
-   lgr->SetMarkerStyle(20);
-   lgr->Draw("P SAME");
-   mgr->SetMarkerColor(kMagenta-10);
-   mgr->SetFillStyle(3001);
-   mgr->SetLineColor(kMagenta-10);
-   mgr->SetLineWidth(3);
-   mgr->SetFillColor(kMagenta-10);
-   mgr->SetMarkerStyle(20);
-   mgr->Draw("3 SAME");
-   ngr->SetMarkerColor(kCyan+3);
-   ngr->SetLineColor(kCyan+3);
-   ngr->SetLineWidth(3);
-   ngr->SetFillColor(kMagenta-10);
-   ngr->SetMarkerStyle(20);
-   ngr->Draw("P SAME");
-   ogr->SetMarkerColor(kMagenta-10);
-   ogr->SetFillStyle(3001);
-   ogr->SetLineColor(kMagenta-10);
-   ogr->SetLineWidth(3);
-   ogr->SetFillColor(kMagenta-10);
-   ogr->SetMarkerStyle(20);
-   ogr->Draw("3 SAME");
-   pgr->SetMarkerColor(kCyan-8);
-   pgr->SetLineColor(kCyan-8);
-   pgr->SetLineWidth(3);
-   pgr->SetFillColor(kMagenta-10);
-   pgr->SetMarkerStyle(20);
-   pgr->Draw("P SAME");
    c1->Update();
 
    c2->cd();
@@ -644,30 +486,6 @@ void graph() {
    hgr = new TGraphErrors( n, energy, rms, energyerror, rmserror );
    hgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
    hgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   igr = new TGraphErrors( n, energy, rms_hist96, energyerror, energyerror );
-   igr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   igr->GetXaxis()->SetTitle("E_{true}, GeV");
-   jgr = new TGraphErrors( n, energy, rms_hist96, energyerror, rmserror_hist96 );
-   jgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   jgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   kgr = new TGraphErrors( n, energy, rms_hist97, energyerror, energyerror );
-   kgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   kgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   lgr = new TGraphErrors( n, energy, rms_hist97, energyerror, rmserror_hist97 );
-   lgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   lgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   mgr = new TGraphErrors( n, energy, rms_hist98, energyerror, energyerror );
-   mgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   mgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ngr = new TGraphErrors( n, energy, rms_hist98, energyerror, rmserror_hist98 );
-   ngr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   ngr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ogr = new TGraphErrors( n, energy, rms_hist99, energyerror, energyerror );
-   ogr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   ogr->GetXaxis()->SetTitle("E_{true}, GeV");
-   pgr = new TGraphErrors( n, energy, rms_hist99, energyerror, rmserror_hist99 );
-   pgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
-   pgr->GetXaxis()->SetTitle("E_{true}, GeV");
    sprintf( fname, "Absolute energy resolution" );
    agr->GetYaxis()->SetRangeUser(0.0, 9.0);
    agr->SetTitle(fname);
@@ -724,58 +542,6 @@ void graph() {
    hgr->SetFillColor(kMagenta-10);
    hgr->SetMarkerStyle(20);
    hgr->Draw("P SAME");
-   igr->SetMarkerColor(kMagenta-10);
-   igr->SetFillStyle(3001);
-   igr->SetLineColor(kMagenta-10);
-   igr->SetLineWidth(3);
-   igr->SetFillColor(kMagenta-10);
-   igr->SetMarkerStyle(20);
-   igr->Draw("3 SAME");
-   jgr->SetMarkerColor(kCyan+1);
-   jgr->SetLineColor(kCyan+1);
-   jgr->SetLineWidth(3);
-   jgr->SetFillColor(kMagenta-10);
-   jgr->SetMarkerStyle(20);
-   jgr->Draw("P SAME");
-   kgr->SetMarkerColor(kMagenta-10);
-   kgr->SetFillStyle(3001);
-   kgr->SetLineColor(kMagenta-10);
-   kgr->SetLineWidth(3);
-   kgr->SetFillColor(kMagenta-10);
-   kgr->SetMarkerStyle(20);
-   kgr->Draw("3 SAME");
-   lgr->SetMarkerColor(kCyan+2);
-   lgr->SetLineColor(kCyan+2);
-   lgr->SetLineWidth(3);
-   lgr->SetFillColor(kMagenta-10);
-   lgr->SetMarkerStyle(20);
-   lgr->Draw("P SAME");
-   mgr->SetMarkerColor(kMagenta-10);
-   mgr->SetFillStyle(3001);
-   mgr->SetLineColor(kMagenta-10);
-   mgr->SetLineWidth(3);
-   mgr->SetFillColor(kMagenta-10);
-   mgr->SetMarkerStyle(20);
-   mgr->Draw("3 SAME");
-   ngr->SetMarkerColor(kCyan+3);
-   ngr->SetLineColor(kCyan+3);
-   ngr->SetLineWidth(3);
-   ngr->SetFillColor(kMagenta-10);
-   ngr->SetMarkerStyle(20);
-   ngr->Draw("P SAME");
-   ogr->SetMarkerColor(kMagenta-10);
-   ogr->SetFillStyle(3001);
-   ogr->SetLineColor(kMagenta-10);
-   ogr->SetLineWidth(3);
-   ogr->SetFillColor(kMagenta-10);
-   ogr->SetMarkerStyle(20);
-   ogr->Draw("3 SAME");
-   pgr->SetMarkerColor(kCyan-8);
-   pgr->SetLineColor(kCyan-8);
-   pgr->SetLineWidth(3);
-   pgr->SetFillColor(kMagenta-10);
-   pgr->SetMarkerStyle(20);
-   pgr->Draw("P SAME");
    c2->Update();
 
    c3->cd();
@@ -839,30 +605,6 @@ void graph() {
    hgr = new TGraphErrors( n, energy, mean, energyerror, meanerror );
    hgr->GetYaxis()->SetTitle("E_{reco}, GeV");
    hgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   igr = new TGraphErrors( n, energy, mean_hist96, energyerror, energyerror );
-   igr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   igr->GetXaxis()->SetTitle("E_{true}, GeV");
-   jgr = new TGraphErrors( n, energy, mean_hist96, energyerror, meanerror_hist96 );
-   jgr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   jgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   kgr = new TGraphErrors( n, energy, mean_hist97, energyerror, energyerror );
-   kgr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   kgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   lgr = new TGraphErrors( n, energy, mean_hist97, energyerror, meanerror_hist97 );
-   lgr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   lgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   mgr = new TGraphErrors( n, energy, mean_hist98, energyerror, energyerror );
-   mgr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   mgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ngr = new TGraphErrors( n, energy, mean_hist98, energyerror, meanerror_hist98 );
-   ngr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   ngr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ogr = new TGraphErrors( n, energy, mean_hist99, energyerror, energyerror );
-   ogr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   ogr->GetXaxis()->SetTitle("E_{true}, GeV");
-   pgr = new TGraphErrors( n, energy, mean_hist99, energyerror, meanerror_hist99 );
-   pgr->GetYaxis()->SetTitle("E_{reco}, GeV");
-   pgr->GetXaxis()->SetTitle("E_{true}, GeV");
    sprintf( fname, "Linearity 2" );
    agr->GetYaxis()->SetRangeUser(0.0, 70.0);
    agr->SetTitle(fname);
@@ -919,58 +661,6 @@ void graph() {
    hgr->SetFillColor(kMagenta-10);
    hgr->SetMarkerStyle(20);
    hgr->Draw("P SAME");
-   igr->SetMarkerColor(kMagenta-10);
-   igr->SetFillStyle(3001);
-   igr->SetLineColor(kMagenta-10);
-   igr->SetLineWidth(3);
-   igr->SetFillColor(kMagenta-10);
-   igr->SetMarkerStyle(20);
-   igr->Draw("3 SAME");
-   jgr->SetMarkerColor(kCyan+1);
-   jgr->SetLineColor(kCyan+1);
-   jgr->SetLineWidth(3);
-   jgr->SetFillColor(kMagenta-10);
-   jgr->SetMarkerStyle(20);
-   jgr->Draw("P SAME");
-   kgr->SetMarkerColor(kMagenta-10);
-   kgr->SetFillStyle(3001);
-   kgr->SetLineColor(kMagenta-10);
-   kgr->SetLineWidth(3);
-   kgr->SetFillColor(kMagenta-10);
-   kgr->SetMarkerStyle(20);
-   kgr->Draw("3 SAME");
-   lgr->SetMarkerColor(kCyan+2);
-   lgr->SetLineColor(kCyan+2);
-   lgr->SetLineWidth(3);
-   lgr->SetFillColor(kMagenta-10);
-   lgr->SetMarkerStyle(20);
-   lgr->Draw("P SAME");
-   mgr->SetMarkerColor(kMagenta-10);
-   mgr->SetFillStyle(3001);
-   mgr->SetLineColor(kMagenta-10);
-   mgr->SetLineWidth(3);
-   mgr->SetFillColor(kMagenta-10);
-   mgr->SetMarkerStyle(20);
-   mgr->Draw("3 SAME");
-   ngr->SetMarkerColor(kCyan+3);
-   ngr->SetLineColor(kCyan+3);
-   ngr->SetLineWidth(3);
-   ngr->SetFillColor(kMagenta-10);
-   ngr->SetMarkerStyle(20);
-   ngr->Draw("P SAME");
-   ogr->SetMarkerColor(kMagenta-10);
-   ogr->SetFillStyle(3001);
-   ogr->SetLineColor(kMagenta-10);
-   ogr->SetLineWidth(3);
-   ogr->SetFillColor(kMagenta-10);
-   ogr->SetMarkerStyle(20);
-   ogr->Draw("3 SAME");
-   pgr->SetMarkerColor(kCyan-8);
-   pgr->SetLineColor(kCyan-8);
-   pgr->SetLineWidth(3);
-   pgr->SetFillColor(kMagenta-10);
-   pgr->SetMarkerStyle(20);
-   pgr->Draw("P SAME");
    c3->Update();
 
    c4->cd();
@@ -1036,30 +726,6 @@ void graph() {
    hgr = new TGraphErrors( n, energy, resolution_hist, energyerror, resolution_error_stat_hist );
    hgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
    hgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   igr = new TGraphErrors( n, energy, resolution_hist96, energyerror, resolution_error_sys_hist96 );
-   igr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   igr->GetXaxis()->SetTitle("E_{true}, GeV");
-   jgr = new TGraphErrors( n, energy, resolution_hist96, energyerror, resolution_error_stat_hist96 );
-   jgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   jgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   kgr = new TGraphErrors( n, energy, resolution_hist97, energyerror, resolution_error_sys_hist97 );
-   kgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   kgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   lgr = new TGraphErrors( n, energy, resolution_hist97, energyerror, resolution_error_stat_hist97 );
-   lgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   lgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   mgr = new TGraphErrors( n, energy, resolution_hist98, energyerror, resolution_error_sys_hist98 );
-   mgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   mgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ngr = new TGraphErrors( n, energy, resolution_hist98, energyerror, resolution_error_stat_hist98 );
-   ngr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   ngr->GetXaxis()->SetTitle("E_{true}, GeV");
-   ogr = new TGraphErrors( n, energy, resolution_hist99, energyerror, resolution_error_sys_hist99 );
-   ogr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   ogr->GetXaxis()->SetTitle("E_{true}, GeV");
-   pgr = new TGraphErrors( n, energy, resolution_hist99, energyerror, resolution_error_stat_hist99 );
-   pgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
-   pgr->GetXaxis()->SetTitle("E_{true}, GeV");
    sprintf( fname, "Relative energy resolution" );
    agr->GetYaxis()->SetRangeUser(0.0, 0.30);
    agr->SetTitle(fname);
@@ -1116,73 +782,13 @@ void graph() {
    hgr->SetFillColor(kMagenta-10);
    hgr->SetMarkerStyle(20);
    hgr->Draw("P SAME");
-   igr->SetMarkerColor(kMagenta-10);
-   igr->SetFillStyle(3001);
-   igr->SetLineColor(kMagenta-10);
-   igr->SetLineWidth(3);
-   igr->SetFillColor(kMagenta-10);
-   igr->SetMarkerStyle(20);
-   igr->Draw("3 SAME");
-   jgr->SetMarkerColor(kCyan+1);
-   jgr->SetLineColor(kCyan+1);
-   jgr->SetLineWidth(3);
-   jgr->SetFillColor(kMagenta-10);
-   jgr->SetMarkerStyle(20);
-   jgr->Draw("P SAME");
-   kgr->SetMarkerColor(kMagenta-10);
-   kgr->SetFillStyle(3001);
-   kgr->SetLineColor(kMagenta-10);
-   kgr->SetLineWidth(3);
-   kgr->SetFillColor(kMagenta-10);
-   kgr->SetMarkerStyle(20);
-   kgr->Draw("3 SAME");
-   lgr->SetMarkerColor(kCyan+2);
-   lgr->SetLineColor(kCyan+2);
-   lgr->SetLineWidth(3);
-   lgr->SetFillColor(kMagenta-10);
-   lgr->SetMarkerStyle(20);
-   lgr->Draw("P SAME");
-   mgr->SetMarkerColor(kMagenta-10);
-   mgr->SetFillStyle(3001);
-   mgr->SetLineColor(kMagenta-10);
-   mgr->SetLineWidth(3);
-   mgr->SetFillColor(kMagenta-10);
-   mgr->SetMarkerStyle(20);
-   mgr->Draw("3 SAME");
-   ngr->SetMarkerColor(kCyan+3);
-   ngr->SetLineColor(kCyan+3);
-   ngr->SetLineWidth(3);
-   ngr->SetFillColor(kMagenta-10);
-   ngr->SetMarkerStyle(20);
-   ngr->Draw("P SAME");
-   ogr->SetMarkerColor(kMagenta-10);
-   ogr->SetFillStyle(3001);
-   ogr->SetLineColor(kMagenta-10);
-   ogr->SetLineWidth(3);
-   ogr->SetFillColor(kMagenta-10);
-   ogr->SetMarkerStyle(20);
-   ogr->Draw("3 SAME");
-   pgr->SetMarkerColor(kCyan-8);
-   pgr->SetLineColor(kCyan-8);
-   pgr->SetLineWidth(3);
-   pgr->SetFillColor(kMagenta-10);
-   pgr->SetMarkerStyle(20);
-   pgr->Draw("P SAME");
    c4->Update();
-   
+    
    TLegend *lsc1 = new TLegend(0.55,0.62,0.90,0.92);
    lsc1->AddEntry(bgr,"fit (stat)","pl");
-   lsc1->AddEntry(dgr,"hist90 (stat)","pl");
-   lsc1->AddEntry(fgr,"hist95 (stat)","pl");
-   lsc1->AddEntry(jgr,"hist96 (stat)","pl");
-   lsc1->AddEntry(lgr,"hist97 (stat)","pl");
-   lsc1->AddEntry(ngr,"hist98 (stat)","pl");
-   lsc1->AddEntry(pgr,"hist99 (stat)","pl");
+   lsc1->AddEntry(dgr,"hist90_2 (stat)","pl");
+   lsc1->AddEntry(fgr,"hist95_2 (stat)","pl");
    lsc1->AddEntry(hgr,"hist (stat)","pl");
-   //lsc1->AddEntry(bgr,"fit (stat)","pl");
-   //lsc1->AddEntry(dgr,"hist90 (stat)","pl");
-   //lsc1->AddEntry(fgr,"hist95 (stat)","pl");
-   //lsc1->AddEntry(hgr,"hist (stat)","pl");
    //lsc1->AddEntry(bgr,"hist90 (w/o errors)","pl");
    //lsc1->AddEntry(dgr,"hist95 (w/o errors)","pl");
    //lsc1->AddEntry(fgr,"hist90_2 (stat)","pl");
@@ -1209,35 +815,23 @@ void graph() {
    //lsc1->AddEntry(bgr,"data, fit 1","plf");
    //lsc1->AddEntry(dgr,"data, fit 2 (stat)","plf");
    //lsc1->AddEntry(fgr,"data, rms_hist (stat)","plf");
-   
+    
    TLegend *lsc2 = new TLegend(0.55,0.62,0.90,0.92);
    lsc2->AddEntry(bgr,"fit (stat)","pl");
-   lsc2->AddEntry(dgr,"hist90 (stat)","pl");
-   lsc2->AddEntry(fgr,"hist95 (stat)","pl");
-   lsc2->AddEntry(jgr,"hist96 (stat)","pl");
-   lsc2->AddEntry(lgr,"hist97 (stat)","pl");
-   lsc2->AddEntry(ngr,"hist98 (stat)","pl");
-   lsc2->AddEntry(pgr,"hist99 (stat)","pl");
+   lsc2->AddEntry(dgr,"hist90_2 (stat)","pl");
+   lsc2->AddEntry(fgr,"hist95_2 (stat)","pl");
    lsc2->AddEntry(hgr,"hist (stat)","pl");
-   
+    
    TLegend *lsc3 = new TLegend(0.55,0.62,0.90,0.92);
    lsc3->AddEntry(bgr,"fit (stat)","pl");
-   lsc3->AddEntry(dgr,"hist90 (stat)","pl");
-   lsc3->AddEntry(fgr,"hist95 (stat)","pl");
-   lsc3->AddEntry(jgr,"hist96 (stat)","pl");
-   lsc3->AddEntry(lgr,"hist97 (stat)","pl");
-   lsc3->AddEntry(ngr,"hist98 (stat)","pl");
-   lsc3->AddEntry(pgr,"hist99 (stat)","pl");
+   lsc3->AddEntry(dgr,"hist90_2 (stat)","pl");
+   lsc3->AddEntry(fgr,"hist95_2 (stat)","pl");
    lsc3->AddEntry(hgr,"hist (stat)","pl");
-   
+    
    TLegend *lsc4 = new TLegend(0.55,0.62,0.90,0.92);
    lsc4->AddEntry(bgr,"fit (stat)","pl");
-   lsc4->AddEntry(dgr,"hist90 (stat)","pl");
-   lsc4->AddEntry(fgr,"hist95 (stat)","pl");
-   lsc4->AddEntry(jgr,"hist96 (stat)","pl");
-   lsc4->AddEntry(lgr,"hist97 (stat)","pl");
-   lsc4->AddEntry(ngr,"hist98 (stat)","pl");
-   lsc4->AddEntry(pgr,"hist99 (stat)","pl");
+   lsc4->AddEntry(dgr,"hist90_2 (stat)","pl");
+   lsc4->AddEntry(fgr,"hist95_2 (stat)","pl");
    lsc4->AddEntry(hgr,"hist (stat)","pl");
 
    c1->cd();
