@@ -54,10 +54,10 @@ Double_t langaufun(Double_t *x, Double_t *par) {
       return (par[2] * step * sum * invsq2pi / par[3]);
 }
 
-void fit2() {  //   Before Digi
+void fit1() {  //   After Digi
 
-  const char *fname = "./up/dmp_ag10um_4.00_1.6_x14.5_z5.5mm_ds1.00_3000evt.root";
-  const char *fOutName = "./up/out/out_dmp_ag10um_4.00_1.6_x14.5_z5.5mm_ds1.00_3000evt.root";
+  const char *fname = "./up/dmp_ag10um_4.00_1.6_x5.5_z5.5mm_ds1.00_3000evt.root";
+  const char *fOutName = "./up/out/out_dmp_ag10um_4.00_1.6_x5.5_z5.5mm_ds1.00_3000evt.root";
 
   TRandom2 *ranGen = new TRandom2();
   ranGen->SetSeed(0);
@@ -70,10 +70,10 @@ void fit2() {  //   Before Digi
   const char *treeName = "DRTile";
   const int nBins = 400;
   const float binLo = 0.0;
-  const float binHi = 800.0;
-//  const float gMean = 3.0;
-//  const float gSigma = 1.5;
-//  const float eff = 0.15;
+  const float binHi = 200.0;
+  const float gMean = 3.0;
+  const float gSigma = 1.5;
+  const float eff = 0.15;
 
   //
   // Open file
@@ -130,14 +130,10 @@ void fit2() {  //   Before Digi
     tree->GetEntry(i);
     hPhotonInSipm_without_trigger->Fill(photonsInSipm);
     if (trigger == 1) {
-//      float nPhCorr = ranGen->Poisson(eff * photonsInSipm) + ranGen->Gaus(gMean, gSigma);
-//      hPhotonInSipm->Fill(nPhCorr);
-      hPhotonInSipm->Fill(photonsInSipm);
+      float nPhCorr = ranGen->Poisson(eff * photonsInSipm) + ranGen->Gaus(gMean, gSigma);
+      hPhotonInSipm->Fill(nPhCorr);
     }
   }
-
-  hPhotonInSipm->GetYaxis()->SetTitle("Number of entries");
-  hPhotonInSipm->GetXaxis()->SetTitle("ADC");
 
   TH1F *copy_from_in_file=(TH1F*)hist->Clone();
 
@@ -154,7 +150,7 @@ void fit2() {  //   Before Digi
 
 
 
-  TFile *filenew = new TFile("./up/out/out_dmp_ag10um_4.00_1.6_x14.5_z5.5mm_ds1.00_3000evt.root");
+  TFile *filenew = new TFile("./up/out/out_dmp_ag10um_4.00_1.6_x5.5_z5.5mm_ds1.00_3000evt.root");
 
   TH1F *histnew;
 
@@ -173,7 +169,7 @@ void fit2() {  //   Before Digi
       return 0;
   } else printf("[OK]\n"); 
 
-  TF1 *ff1 = new TF1("ff1",langaufun,140,350,4);
+  TF1 *ff1 = new TF1("ff1",langaufun,0,80,4);
   ff1->SetParameters(0.1*histnew->GetMean(),
 		    histnew->GetMean(),
 		    double(histnew->GetEntries()),

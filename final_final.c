@@ -7,7 +7,7 @@ void final() {
   const float Y_UP = 37;  
   const char *FNAME_X = "x_scan3.txt";
   const char *FNAME_Y = "y_scan3.txt";
-  const char *FNAME_AMP = "out_chi22_second.txt";
+  const char *FNAME_AMP = "out_scan3_plus.txt";
    
   TCanvas *c1 = new TCanvas("c1", "c1", 600, 600);
 
@@ -28,7 +28,7 @@ void final() {
 
     printf("%f %f %f\n", x, y, amp);
 
-    hist->Fill(x, y, amp);
+    hist->Fill(x, y, (amp / 10.0));
   }
   hist->GetXaxis()->SetTitle("x, mm ");
   hist->GetYaxis()->SetTitle("y, mm ");
