@@ -1,29 +1,54 @@
-void plot_data_ann() {
+void plot_data_ann22222() {
    TCanvas *c1 = new TCanvas("graph1","graph1",200,10,700,500);
    TCanvas *c2 = new TCanvas("graph2","graph2",200,10,700,500);
    TCanvas *c3 = new TCanvas("graph3","graph3",200,10,700,500);
    TCanvas *c4 = new TCanvas("graph4","graph4",200,10,700,500);
 
-   TCanvas *c5 = new TCanvas("graph5","graph5",200,10,700,500);
-   TCanvas *c6 = new TCanvas("graph6","graph6",200,10,700,500);
+//   TCanvas *c5 = new TCanvas("graph5","graph5",200,10,700,500);
+//   TCanvas *c6 = new TCanvas("graph6","graph6",200,10,700,500);
 
-/*   TCanvas *c7 = new TCanvas("graph7","graph7",200,10,700,500);
+   TCanvas *c7 = new TCanvas("graph7","graph7",200,10,700,500);
    TCanvas *c8 = new TCanvas("graph8","graph8",200,10,700,500);
    TCanvas *c9 = new TCanvas("graph9","graph9",200,10,700,500);
    TCanvas *c10 = new TCanvas("graph10","graph10",200,10,700,500);
-   TCanvas *c11 = new TCanvas("graph11","graph11",200,10,700,500);
-   TCanvas *c12 = new TCanvas("graph12","graph12",200,10,700,500);
-*/
+//   TCanvas *c11 = new TCanvas("graph11","graph11",200,10,700,500);
+//   TCanvas *c12 = new TCanvas("graph12","graph12",200,10,700,500);
+
+//   TCanvas *c13 = new TCanvas("graph13","graph13",200,10,700,500);
+//   TCanvas *c14 = new TCanvas("graph14","graph14",200,10,700,500);
+//   TCanvas *c15 = new TCanvas("graph15","graph15",200,10,700,500);
+//   TCanvas *c16 = new TCanvas("graph16","graph16",200,10,700,500);
+
+   TCanvas *c17 = new TCanvas("graph17","graph17",200,10,700,500);
+   TCanvas *c18 = new TCanvas("graph18","graph18",200,10,700,500);
+   TCanvas *c19 = new TCanvas("graph19","graph19",200,10,700,500);
+   TCanvas *c20 = new TCanvas("graph20","graph20",200,10,700,500);
+    
    c1->SetGrid();
    c2->SetGrid();
    c3->SetGrid();
    c4->SetGrid();
 
-   c5->SetGrid();
-   c6->SetGrid();
+//   c5->SetGrid();
+//   c6->SetGrid();
 
-//   c7->SetGrid();
-//   c8->SetGrid();
+   c7->SetGrid();
+   c8->SetGrid();
+   c9->SetGrid();
+   c10->SetGrid();
+    
+//   c11->SetGrid();
+//   c12->SetGrid();
+
+//   c13->SetGrid();
+//   c14->SetGrid();
+//   c15->SetGrid();
+//   c16->SetGrid();
+    
+   c17->SetGrid();
+   c18->SetGrid();
+   c19->SetGrid();
+   c20->SetGrid();
 
    c1->SetTickx(1);
    c1->SetTicky(1);
@@ -34,15 +59,50 @@ void plot_data_ann() {
    c4->SetTickx(1);
    c4->SetTicky(1);
 
-   c5->SetTickx(1);
-   c5->SetTicky(1);
-   c6->SetTickx(1);
-   c6->SetTicky(1);
+//   c5->SetTickx(1);
+//   c5->SetTicky(1);
+//   c6->SetTickx(1);
+//   c6->SetTicky(1);
+    
+   c7->SetTickx(1);
+   c7->SetTicky(1);
+   c8->SetTickx(1);
+   c8->SetTicky(1);
+   c9->SetTickx(1);
+   c9->SetTicky(1);
+   c10->SetTickx(1);
+   c10->SetTicky(1);
+    
+//   c11->SetTickx(1);
+//   c11->SetTicky(1);
+//   c12->SetTickx(1);
+//   c12->SetTicky(1);
+
+//   c13->SetTickx(1);
+//   c13->SetTicky(1);
+//   c14->SetTickx(1);
+//   c14->SetTicky(1);
+//   c15->SetTickx(1);
+//   c15->SetTicky(1);
+//   c16->SetTickx(1);
+//   c16->SetTicky(1);
+    
+   c17->SetTickx(1);
+   c17->SetTicky(1);
+   c18->SetTickx(1);
+   c18->SetTicky(1);
+   c19->SetTickx(1);
+   c19->SetTicky(1);
+   c20->SetTickx(1);
+   c20->SetTicky(1);
 
    const Int_t n = 29; // 9
 
    Float_t energy[ n ];
    Float_t energyerror[ n ];
+
+//   Float_t energy111[ n ];
+//   Float_t energy222[ n ];
    
 // for data
    Float_t mean[ n ];
@@ -143,7 +203,7 @@ void plot_data_ann() {
    Float_t resolution_error2[ n ];
 
 // for difference
-   Float_t ratio_abs_hist[ n ];
+/*   Float_t ratio_abs_hist[ n ];
    Float_t ratio_abs_error_stat_hist[ n ];
    Float_t ratio_abs_error_sys_hist[ n ];
    Float_t ratio_abs_error_hist[ n ];
@@ -172,11 +232,25 @@ void plot_data_ann() {
    Float_t ratio_abs_other_error_stat[ n ];
    Float_t ratio_abs_other_error_sys[ n ];
    Float_t ratio_abs_other_error[ n ];
-
+*/
+    
+// for ratio plot
+   Float_t ratio_plot_lin1[ n ];
+   Float_t ratio_plot_lin1_error[ n ];
+   Float_t ratio_plot_lin2[ n ];
+   Float_t ratio_plot_lin2_error[ n ];
+   Float_t ratio_plot_abs[ n ];
+   Float_t ratio_plot_abs_error[ n ];
+   Float_t ratio_plot_rel[ n ];
+   Float_t ratio_plot_rel_error[ n ];
+    
    for( int i = 0; i < n; i++ ) {
 
    energy[ i ] = 0.0;
    energyerror[ i ] = 0.0;
+
+//   energy111[ i ] = 0.0;
+//   energy222[ i ] = 0.0;
    
 // for data
    mean[ i ] = 0.0;
@@ -277,7 +351,7 @@ void plot_data_ann() {
    resolution_error2[ i ] = 0.0;
 
 // for difference
-   ratio_abs_hist[ i ] = 0.0;
+/*   ratio_abs_hist[ i ] = 0.0;
    ratio_abs_error_stat_hist[ i ] = 0.0;
    ratio_abs_error_sys_hist[ i ] = 0.0;
    ratio_abs_error_hist[ i ] = 0.0;
@@ -306,7 +380,17 @@ void plot_data_ann() {
    ratio_abs_other_error_stat[ i ] = 0.0;
    ratio_abs_other_error_sys[ i ] = 0.0;
    ratio_abs_other_error[ i ] = 0.0;
-
+*/
+// for ratio plot
+   ratio_plot_lin1[ i ] = 0.0;
+   ratio_plot_lin1_error[ i ] = 0.0;
+   ratio_plot_lin2[ i ] = 0.0;
+   ratio_plot_lin2_error[ i ] = 0.0;
+   ratio_plot_abs[ i ] = 0.0;
+   ratio_plot_abs_error[ i ] = 0.0;
+   ratio_plot_rel[ i ] = 0.0;
+   ratio_plot_rel_error[ i ] = 0.0;
+       
    }
 
 // for data
@@ -394,7 +478,7 @@ void plot_data_ann() {
     resolution_error2[ i ] = sqrt( ( pow( resolution_error_stat2[ i ], 2 ) ) + ( pow( resolution_error_sys2[ i ], 2 ) ) );
 
 // for difference
-    ratio_abs_hist[ i ] = ( rms2[i] - rms[i] ) / rms[i];
+/*    ratio_abs_hist[ i ] = ( rms2[i] - rms[i] ) / rms[i];
     ratio_abs_error_stat_hist[ i ] = sqrt( pow( (rmserror2[i]) / (rms[i]), 2 ) + pow( (rms2[i] * rmserror[i]) / (rms[i] * rms[i]), 2 ) );
     ratio_abs_error_sys_hist[ i ] = 0.0;
     ratio_abs_error_hist[ i ] = sqrt( ( pow( ratio_abs_error_stat_hist[ i ], 2 ) ) + ( pow( ratio_abs_error_sys_hist[ i ], 2 ) ) );
@@ -423,7 +507,7 @@ void plot_data_ann() {
     ratio_abs_other_error_stat[ i ] = sqrt( pow( (mean_sigmaerror2[i]) / (mean_sigma[i]), 2 ) + pow( (mean_sigma2[i] * mean_sigmaerror[i]) / (mean_sigma[i] * mean_sigma[i]), 2 ) );
     ratio_abs_other_error_sys[ i ] = 0.0;
     ratio_abs_other_error[ i ] = sqrt( ( pow( ratio_abs_other_error_stat[ i ], 2 ) ) + ( pow( ratio_abs_other_error_sys[ i ], 2 ) ) );
-    
+*/
   }
     
 /*    printf( "\n" );
@@ -537,47 +621,47 @@ void plot_data_ann() {
      printf( "\n" );
      printf( "\n" );
    }
+    
+   const Float_t binLo_lin1 = -0.4;
+   const Float_t binHi_lin1 = 0.3;
+
+   const Float_t binLo_lin2 = 0.0;
+   const Float_t binHi_lin2 = 130.0;
+
+   const Float_t binLo_abs = 0.0;
+   const Float_t binHi_abs = 9.0;
+
+   const Float_t binLo_rel = 0.0;
+   const Float_t binHi_rel = 0.45;
+
+   const Float_t binLo_abs_dif1 = -1.0;
+   const Float_t binHi_abs_dif1 = 1.0;
+
+   const Float_t binLo_abs_dif2 = -1.0;
+   const Float_t binHi_abs_dif2 = 1.0;
 
 //--------------------------------------------------------------------------------------------------
 
-   TH1F *hist_lin1;
-   TH1F *hist_lin2;
-   TH1F *hist_abs;
-   TH1F *hist_rel;
-   TH1F *hist_abs_dif1;
-   TH1F *hist_abs_dif2;
+  TH1F *hist_lin1;
+  TH1F *hist_lin2;
+  TH1F *hist_abs;
+  TH1F *hist_rel;
+//  TH1F *hist_abs_dif1;
+//  TH1F *hist_abs_dif2;
 
-   TH1F *hist1_lin1;
-   TH1F *hist1_lin2;
-   TH1F *hist1_abs;
-   TH1F *hist1_rel;
+  TH1F *hist1_lin1;
+  TH1F *hist1_lin2;
+  TH1F *hist1_abs;
+  TH1F *hist1_rel;
 
   const Int_t nBins = 30;
-
-  const Float_t binLo_lin1 = -0.4;
-  const Float_t binHi_lin1 = 0.3;
-
-  const Float_t binLo_lin2 = 0.0;
-  const Float_t binHi_lin2 = 130.0;
-
-  const Float_t binLo_abs = 0.0;
-  const Float_t binHi_abs = 9.0;
-
-  const Float_t binLo_rel = 0.0;
-  const Float_t binHi_rel = 0.45;
-
-  const Float_t binLo_abs_dif1 = -1.0;
-  const Float_t binHi_abs_dif1 = 1.0;
-
-  const Float_t binLo_abs_dif2 = -1.0;
-  const Float_t binHi_abs_dif2 = 1.0;
 
   hist_lin1 = new TH1F("hist_lin1", "hist_lin1", nBins, binLo_lin1, binHi_lin1);
   hist_lin2 = new TH1F("hist_lin2", "hist_lin2", nBins, binLo_lin2, binHi_lin2);
   hist_abs = new TH1F("hist_abs", "hist_abs", nBins, binLo_abs, binHi_abs);
   hist_rel = new TH1F("hist_rel", "hist_rel", nBins, binLo_rel, binHi_rel);
-  hist_abs_dif1 = new TH1F("hist_abs_dif1", "hist_abs_dif1", nBins, binLo_abs_dif1, binHi_abs_dif1);
-  hist_abs_dif2 = new TH1F("hist_abs_dif2", "hist_abs_dif2", nBins, binLo_abs_dif2, binHi_abs_dif2);
+//  hist_abs_dif1 = new TH1F("hist_abs_dif1", "hist_abs_dif1", nBins, binLo_abs_dif1, binHi_abs_dif1);
+//  hist_abs_dif2 = new TH1F("hist_abs_dif2", "hist_abs_dif2", nBins, binLo_abs_dif2, binHi_abs_dif2);
 
   hist1_lin1 = new TH1F("hist1_lin1", "hist1_lin1", nBins, binLo_lin1, binHi_lin1);
   hist1_lin2 = new TH1F("hist1_lin2", "hist1_lin2", nBins, binLo_lin2, binHi_lin2);
@@ -590,8 +674,8 @@ void plot_data_ann() {
      hist_lin2 -> Fill( mean_hist90[ i ] );
      hist_abs -> Fill( rms_hist90[ i ] );
      hist_rel -> Fill( resolution_hist90[ i ] );
-     hist_abs_dif1 -> Fill( ratio_abs_hist90[ i ] );
-     hist_abs_dif2 -> Fill( ratio_abs_other_hist90[ i ] );
+//     hist_abs_dif1 -> Fill( ratio_abs_hist90[ i ] );
+//     hist_abs_dif2 -> Fill( ratio_abs_other_hist90[ i ] );
 
      hist1_lin1 -> Fill( ratio_hist902[ i ] );
      hist1_lin2 -> Fill( mean_hist902[ i ] );
@@ -612,13 +696,13 @@ void plot_data_ann() {
   cout << "Underflow hist_rel === " << hist_rel->GetBinContent( 0 ) << endl;
   cout << "Overflow hist_rel === " << hist_rel->GetBinContent( nBins + 1 ) << endl;
 
-  printf( "\n" );
+//  printf( "\n" );
 
-  cout << "Underflow hist_abs_dif1 === " << hist_abs_dif1->GetBinContent( 0 ) << endl;
-  cout << "Overflow hist_abs_dif1 === " << hist_abs_dif1->GetBinContent( nBins + 1 ) << endl;
+//  cout << "Underflow hist_abs_dif1 === " << hist_abs_dif1->GetBinContent( 0 ) << endl;
+//  cout << "Overflow hist_abs_dif1 === " << hist_abs_dif1->GetBinContent( nBins + 1 ) << endl;
 
-  cout << "Underflow hist_abs_dif2 === " << hist_abs_dif2->GetBinContent( 0 ) << endl;
-  cout << "Overflow hist_abs_dif2 === " << hist_abs_dif2->GetBinContent( nBins + 1 ) << endl;
+//  cout << "Underflow hist_abs_dif2 === " << hist_abs_dif2->GetBinContent( 0 ) << endl;
+//  cout << "Overflow hist_abs_dif2 === " << hist_abs_dif2->GetBinContent( nBins + 1 ) << endl;
 
   printf( "\n" );
 
@@ -680,7 +764,7 @@ void plot_data_ann() {
     << "  rmserror_hist_rel: " << rmserror_hist_rel
     << endl;
 
-  printf( "\n" );
+/*  printf( "\n" );
 
   Float_t mean_hist_abs_dif1 = hist_abs_dif1 -> GetMean();
   Float_t meanerror_hist_abs_dif1 = hist_abs_dif1 -> GetMeanError();
@@ -703,7 +787,7 @@ void plot_data_ann() {
     << "  rms_hist_abs_dif2: " << rms_hist_abs_dif2
     << "  rmserror_hist_abs_dif2: " << rmserror_hist_abs_dif2
     << endl;
-
+*/
   printf( "\n" );
 
   Float_t mean_hist1_lin1 = hist1_lin1 -> GetMean();
@@ -750,11 +834,64 @@ void plot_data_ann() {
     << "  rmserror_hist1_rel: " << rmserror_hist1_rel
     << endl;
 
-
 //--------------------------------------------------------------------------------------------------
-
+/*
    printf( "\n" );
 
+   for( int i = 0; i < n; i++ ) {
+
+      energy111[ i ] = sqrtf( energy[ i ] );
+      energy222[ i ] = 1.0 / sqrtf( energy[ i ] );
+
+   }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+   for( int i = 0; i < n; i++ ) {
+
+     cout << "energy === " << energy[ i ] << " and energy111 === " << energy111[ i ] << " and energy222 === " << energy222[ i ] << endl;
+
+   }
+   printf( "\n" );
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+    
+   printf( "\n" );
+    
+   for ( int i = 0; i < n; i++ ) {
+       
+       cout << "i = " << i << endl;
+       
+     //  cout << "ratio_hist90 = " << ratio_hist90[ i ] << " and ratio_hist902 = " << ratio_hist902[ i ] << endl;
+     //  cout << "mean_hist90 = " << mean_hist90[ i ] << " and mean_hist902 = " << mean_hist902[ i ] << endl;
+     //  cout << "rms_hist90 = " << rms_hist90[ i ] << " and rms_hist902 = " << rms_hist902[ i ] << endl;
+     //  cout << "resolution_hist90 = " << resolution_hist90[ i ] << " and resolution_hist902 = " << resolution_hist902[ i ] << endl;
+       
+     //  printf( "\n" );
+      
+       // for ratio plot
+       ratio_plot_lin1[ i ] = ratio_hist90[ i ] / ratio_hist902[ i ];
+       ratio_plot_lin1_error[ i ] = sqrt( pow( (ratio_error_stat_hist90[i]) / (ratio_hist902[i]), 2 ) + pow( (ratio_hist90[i] * ratio_error_stat_hist902[i]) / (ratio_hist902[i] * ratio_hist902[i]), 2 ) );
+       
+       ratio_plot_lin2[ i ] = mean_hist90[ i ] / mean_hist902[ i ];
+       ratio_plot_lin2_error[ i ] = sqrt( pow( (meanerror_hist90[i]) / (ratio_hist902[i]), 2 ) + pow( (ratio_hist90[i] * meanerror_hist902[i]) / (mean_hist902[i] * mean_hist902[i]), 2 ) );
+       
+       ratio_plot_abs[ i ] = rms_hist90[ i ] / rms_hist902[ i ];
+       ratio_plot_abs_error[ i ] = sqrt( pow( (rmserror_hist90[i]) / (rms_hist902[i]), 2 ) + pow( (rms_hist90[i] * rmserror_hist902[i]) / (rms_hist902[i] * rms_hist902[i]), 2 ) );
+       
+       ratio_plot_rel[ i ] = resolution_hist90[ i ] / resolution_hist902[ i ];
+       ratio_plot_rel_error[ i ] = sqrt( pow( (resolution_error_stat_hist90[i]) / (resolution_hist902[i]), 2 ) + pow( (resolution_hist90[i] * resolution_error_stat_hist902[i]) / (resolution_hist902[i] * resolution_hist902[i]), 2 ) );
+        
+       cout << "ratio_plot_lin1 = " << ratio_plot_lin1[ i ] << " and ratio_plot_lin1_error = " << ratio_plot_lin1_error[ i ] << endl;
+       cout << "ratio_plot_lin2 = " << ratio_plot_lin2[ i ] << " and ratio_plot_lin2_error = " << ratio_plot_lin2_error[ i ] << endl;
+       cout << "ratio_plot_abs = " << ratio_plot_abs[ i ] << " and ratio_plot_abs_error = " << ratio_plot_abs_error[ i ] << endl;
+       cout << "ratio_plot_rel = " << ratio_plot_rel[ i ] << " and ratio_plot_rel_error = " << ratio_plot_rel_error[ i ] << endl;
+       
+   }
+    
+   printf( "\n" );
+ 
    TGraphErrors *agr;
    TGraphErrors *bgr;
     
@@ -782,6 +919,7 @@ void plot_data_ann() {
    agr->SetTitle(fname);
     
 //--------------------------------------------------------------------------------------------------
+/*
     Double_t lin1_chi2 = 0.0;
     Double_t lin1_chisl = 0.0;
     Double_t lin1_znam = 0.0;
@@ -796,6 +934,7 @@ void plot_data_ann() {
     cout << "Linearity: lin1_chi2 === " << lin1_chi2 << endl;
     cout << "Linearity: lin1_chi2 / n === " << lin1_chi2 / n << endl;
     cout << "Linearity: lin1_chi2 / 29 === " << lin1_chi2 / 29 << "\n" << endl;
+ */
 //--------------------------------------------------------------------------------------------------
 
    agr->SetFillColor(kCyan);
@@ -844,6 +983,7 @@ void plot_data_ann() {
    agr->SetTitle(fname);
     
 //--------------------------------------------------------------------------------------------------
+/*
     Double_t lin2_chi2 = 0.0;
     Double_t lin2_chisl = 0.0;
     Double_t lin2_znam = 0.0;
@@ -858,6 +998,7 @@ void plot_data_ann() {
     cout << "Linearity 2: lin2_chi2 === " << lin2_chi2 << endl;
     cout << "Linearity 2: lin2_chi2 / n === " << lin2_chi2 / n << endl;
     cout << "Linearity 2: lin2_chi2 / 29 === " << lin2_chi2 / 29 << "\n" << endl;
+ */
 //--------------------------------------------------------------------------------------------------
 
    agr->SetFillColor(kCyan);
@@ -906,6 +1047,7 @@ void plot_data_ann() {
    agr->SetTitle(fname);
     
 //--------------------------------------------------------------------------------------------------
+/*
     Double_t abs_chi2 = 0.0;
     Double_t abs_chisl = 0.0;
     Double_t abs_znam = 0.0;
@@ -920,6 +1062,7 @@ void plot_data_ann() {
     cout << "Absolute energy resolution: abs_chi2 === " << abs_chi2 << endl;
     cout << "Absolute energy resolution: abs_chi2 / n === " << abs_chi2 / n << endl;
     cout << "Absolute energy resolution: abs_chi2 / 29 === " << abs_chi2 / 29 << "\n" << endl;
+ */
 //--------------------------------------------------------------------------------------------------
 
    agr->SetFillColor(kCyan);
@@ -968,6 +1111,7 @@ void plot_data_ann() {
    agr->SetTitle(fname);
     
 //--------------------------------------------------------------------------------------------------
+/*
     Double_t rel_chi2 = 0.0;
     Double_t rel_chisl = 0.0;
     Double_t rel_znam = 0.0;
@@ -982,6 +1126,7 @@ void plot_data_ann() {
     cout << "Relative energy resolution: rel_chi2 === " << rel_chi2 << endl;
     cout << "Relative energy resolution: rel_chi2 / n === " << rel_chi2 / n << endl;
     cout << "Relative energy resolution: rel_chi2 / 29 === " << rel_chi2 / 29 << "\n" << endl;
+ */
 //--------------------------------------------------------------------------------------------------
 
    agr->SetFillColor(kCyan);
@@ -1012,7 +1157,7 @@ void plot_data_ann() {
    dgr->Draw("P SAME");
    c4->Update();
    
-   c5->cd();
+/*   c5->cd();
    agr = new TGraphErrors( n, energy, ratio_abs_hist90, energyerror, ratio_abs_error_sys_hist90 );
    agr->GetYaxis()->SetTitle("( #DeltaE_{ann} - #DeltaE_{reco} ) / #DeltaE_{reco}");
    agr->GetXaxis()->SetTitle("E_{true}, GeV");
@@ -1025,7 +1170,7 @@ void plot_data_ann() {
 //   dgr = new TGraphErrors( n, energy, ratio_abs_hist90, energyerror, ratio_abs_error_stat_hist90 );
 //   dgr->GetYaxis()->SetTitle("( #DeltaE_{ann} - #DeltaE_{reco} ) / #DeltaE_{reco}");
 //   dgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   sprintf( fname, "Absolute difference (Single K0_{L} in ILD)" );
+   sprintf( fname, "Absolute difference" );
 //   agr->GetYaxis()->SetRangeUser(0.5, 2.0);
 //   agr->GetYaxis()->SetRangeUser(binLo_abs_dif1, binHi_abs_dif1);
    agr->SetTitle(fname);
@@ -1071,7 +1216,7 @@ void plot_data_ann() {
 //   dgr = new TGraphErrors( n, energy, ratio_abs_other_hist90, energyerror, ratio_abs_other_error_stat_hist90 );
 //   dgr->GetYaxis()->SetTitle("#DeltaE_{ann} / #DeltaE_{reco}");
 //   dgr->GetXaxis()->SetTitle("E_{true}, GeV");
-   sprintf( fname, "Absolute difference 2 (Single K0_{L} in ILD)" );
+   sprintf( fname, "Absolute difference 2" );
 //   agr->GetYaxis()->SetRangeUser(1.5, 3.0);
 //   agr->GetYaxis()->SetRangeUser(binLo_abs_dif2, binHi_abs_dif2);
    agr->SetTitle(fname);
@@ -1104,6 +1249,262 @@ void plot_data_ann() {
    dgr->Draw("P SAME");
    c6->Update();
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+/*   c13->cd();
+   agr = new TGraphErrors( n, energy111, rms_hist90, energyerror, energyerror );
+   agr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   agr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   bgr = new TGraphErrors( n, energy111, rms_hist90, energyerror, rmserror_hist90 );
+   bgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   bgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   cgr = new TGraphErrors( n, energy111, rms_hist902, energyerror, energyerror );
+   cgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   cgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   dgr = new TGraphErrors( n, energy111, rms_hist902, energyerror, rmserror_hist902 );
+   dgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   dgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   sprintf( fname, "Absolute energy resolution" );
+   agr->GetYaxis()->SetRangeUser(binLo_abs, binHi_abs);
+   agr->SetTitle(fname);
+
+   agr->SetFillColor(kCyan);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kCyan);
+   agr->SetLineColor(kCyan);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   bgr->SetMarkerColor(kBlue);
+   bgr->SetLineColor(kBlue);
+   bgr->SetLineWidth(3);
+   bgr->SetFillColor(kCyan);
+   bgr->SetMarkerStyle(20);
+   bgr->Draw("P SAME");
+   cgr->SetMarkerColor(kYellow-6);
+   cgr->SetFillStyle(3001);
+   cgr->SetLineColor(kYellow-6);
+   cgr->SetLineWidth(3);
+   cgr->SetFillColor(kYellow-6);
+   cgr->SetMarkerStyle(20);
+   cgr->Draw("3 SAME");
+   dgr->SetMarkerColor(kRed);
+   dgr->SetLineColor(kRed);
+   dgr->SetLineWidth(3);
+   dgr->SetFillColor(kYellow-6);
+   dgr->SetMarkerStyle(20);
+   dgr->Draw("P SAME");
+   c13->Update();
+
+   c14->cd();
+   agr = new TGraphErrors( n, energy222, rms_hist90, energyerror, energyerror );
+   agr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   agr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   bgr = new TGraphErrors( n, energy222, rms_hist90, energyerror, rmserror_hist90 );
+   bgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   bgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   cgr = new TGraphErrors( n, energy222, rms_hist902, energyerror, energyerror );
+   cgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   cgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   dgr = new TGraphErrors( n, energy222, rms_hist902, energyerror, rmserror_hist902 );
+   dgr->GetYaxis()->SetTitle("#DeltaE_{reco}, GeV");
+   dgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   sprintf( fname, "Absolute energy resolution" );
+   agr->GetYaxis()->SetRangeUser(binLo_abs, binHi_abs);
+   agr->SetTitle(fname);
+
+   agr->SetFillColor(kCyan);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kCyan);
+   agr->SetLineColor(kCyan);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   bgr->SetMarkerColor(kBlue);
+   bgr->SetLineColor(kBlue);
+   bgr->SetLineWidth(3);
+   bgr->SetFillColor(kCyan);
+   bgr->SetMarkerStyle(20);
+   bgr->Draw("P SAME");
+   cgr->SetMarkerColor(kYellow-6);
+   cgr->SetFillStyle(3001);
+   cgr->SetLineColor(kYellow-6);
+   cgr->SetLineWidth(3);
+   cgr->SetFillColor(kYellow-6);
+   cgr->SetMarkerStyle(20);
+   cgr->Draw("3 SAME");
+   dgr->SetMarkerColor(kRed);
+   dgr->SetLineColor(kRed);
+   dgr->SetLineWidth(3);
+   dgr->SetFillColor(kYellow-6);
+   dgr->SetMarkerStyle(20);
+   dgr->Draw("P SAME");
+   c14->Update();
+
+   c15->cd();
+   agr = new TGraphErrors( n, energy111, resolution_hist90, energyerror, resolution_error_sys_hist90 );
+   agr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   agr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   bgr = new TGraphErrors( n, energy111, resolution_hist90, energyerror, resolution_error_stat_hist90 );
+   bgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   bgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   cgr = new TGraphErrors( n, energy111, resolution_hist902, energyerror, resolution_error_sys_hist902 );
+   cgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   cgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   dgr = new TGraphErrors( n, energy111, resolution_hist902, energyerror, resolution_error_stat_hist902 );
+   dgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   dgr->GetXaxis()->SetTitle("#sqrt{E_{true}}, GeV");
+   sprintf( fname, "Relative energy resolution" );
+   agr->GetYaxis()->SetRangeUser(binLo_rel, binHi_rel);
+   agr->SetTitle(fname);
+
+   agr->SetFillColor(kCyan);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kCyan);
+   agr->SetLineColor(kCyan);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   bgr->SetMarkerColor(kBlue);
+   bgr->SetLineColor(kBlue);
+   bgr->SetLineWidth(3);
+   bgr->SetFillColor(kCyan);
+   bgr->SetMarkerStyle(20);
+   bgr->Draw("P SAME");
+   cgr->SetMarkerColor(kYellow-6);
+   cgr->SetFillStyle(3001);
+   cgr->SetLineColor(kYellow-6);
+   cgr->SetLineWidth(3);
+   cgr->SetFillColor(kYellow-6);
+   cgr->SetMarkerStyle(20);
+   cgr->Draw("3 SAME");
+   dgr->SetMarkerColor(kRed);
+   dgr->SetLineColor(kRed);
+   dgr->SetLineWidth(3);
+   dgr->SetFillColor(kYellow-6);
+   dgr->SetMarkerStyle(20);
+   dgr->Draw("P SAME");
+   c15->Update();
+
+   c16->cd();
+   agr = new TGraphErrors( n, energy222, resolution_hist90, energyerror, resolution_error_sys_hist90 );
+   agr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   agr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   bgr = new TGraphErrors( n, energy222, resolution_hist90, energyerror, resolution_error_stat_hist90 );
+   bgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   bgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   cgr = new TGraphErrors( n, energy222, resolution_hist902, energyerror, resolution_error_sys_hist902 );
+   cgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   cgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   dgr = new TGraphErrors( n, energy222, resolution_hist902, energyerror, resolution_error_stat_hist902 );
+   dgr->GetYaxis()->SetTitle("#DeltaE_{reco} / E_{reco}");
+   dgr->GetXaxis()->SetTitle("1.0/#sqrt{E_{true}}, GeV");
+   sprintf( fname, "Relative energy resolution" );
+   agr->GetYaxis()->SetRangeUser(binLo_rel, binHi_rel);
+   agr->SetTitle(fname);
+
+   agr->SetFillColor(kCyan);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kCyan);
+   agr->SetLineColor(kCyan);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   bgr->SetMarkerColor(kBlue);
+   bgr->SetLineColor(kBlue);
+   bgr->SetLineWidth(3);
+   bgr->SetFillColor(kCyan);
+   bgr->SetMarkerStyle(20);
+   bgr->Draw("P SAME");
+   cgr->SetMarkerColor(kYellow-6);
+   cgr->SetFillStyle(3001);
+   cgr->SetLineColor(kYellow-6);
+   cgr->SetLineWidth(3);
+   cgr->SetFillColor(kYellow-6);
+   cgr->SetMarkerStyle(20);
+   cgr->Draw("3 SAME");
+   dgr->SetMarkerColor(kRed);
+   dgr->SetLineColor(kRed);
+   dgr->SetLineWidth(3);
+   dgr->SetFillColor(kYellow-6);
+   dgr->SetMarkerStyle(20);
+   dgr->Draw("P SAME");
+   c16->Update();
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+   c17->cd();
+   agr = new TGraphErrors( n, energy, ratio_plot_lin1, energyerror, ratio_plot_lin1_error );
+   agr->GetYaxis()->SetTitle("!!!( E_{reco} - E_{true} ) / E_{true}");
+   agr->GetXaxis()->SetTitle("E_{true}, GeV");
+   sprintf( fname, "!!!Linearity (Single K0_{L} in ILD)" );
+   agr->GetYaxis()->SetRangeUser(-30.0, 30.0);
+   agr->SetTitle(fname);
+    
+   agr->SetFillColor(kBlue);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kBlue);
+   agr->SetLineColor(kBlue);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   c17->Update();
+    
+   c18->cd();
+   agr = new TGraphErrors( n, energy, ratio_plot_lin2, energyerror, ratio_plot_lin2_error );
+   agr->GetYaxis()->SetTitle("!!!( E_{reco} - E_{true} ) / E_{true}");
+   agr->GetXaxis()->SetTitle("E_{true}, GeV");
+   sprintf( fname, "!!!Linearity (Single K0_{L} in ILD)" );
+   agr->GetYaxis()->SetRangeUser(-3.0, 3.0);
+   agr->SetTitle(fname);
+     
+   agr->SetFillColor(kBlue);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kBlue);
+   agr->SetLineColor(kBlue);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   c18->Update();
+    
+   c19->cd();
+   agr = new TGraphErrors( n, energy, ratio_plot_abs, energyerror, ratio_plot_abs_error );
+   agr->GetYaxis()->SetTitle("!!!( E_{reco} - E_{true} ) / E_{true}");
+   agr->GetXaxis()->SetTitle("E_{true}, GeV");
+   sprintf( fname, "!!!Linearity (Single K0_{L} in ILD)" );
+   agr->GetYaxis()->SetRangeUser(-1.0, 3.0);
+   agr->SetTitle(fname);
+     
+   agr->SetFillColor(kBlue);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kBlue);
+   agr->SetLineColor(kBlue);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   c19->Update();
+    
+   c20->cd();
+   agr = new TGraphErrors( n, energy, ratio_plot_rel, energyerror, ratio_plot_rel_error );
+   agr->GetYaxis()->SetTitle("!!!( E_{reco} - E_{true} ) / E_{true}");
+   agr->GetXaxis()->SetTitle("E_{true}, GeV");
+   sprintf( fname, "!!!Linearity (Single K0_{L} in ILD)" );
+   agr->GetYaxis()->SetRangeUser(-1.0, 3.0);
+   agr->SetTitle(fname);
+     
+   agr->SetFillColor(kBlue);
+   agr->SetFillStyle(3001);
+   agr->SetMarkerColor(kBlue);
+   agr->SetLineColor(kBlue);
+   agr->SetLineWidth(3);
+   agr->SetMarkerStyle(34);
+   agr->Draw("A 3");
+   c20->Update();
+    
    TLegend *lsc1 = new TLegend(0.55,0.62,0.90,0.92);
    lsc1->AddEntry(bgr,"reco, hist90 (stat)","pl");
    lsc1->AddEntry(dgr,"dnn, hist90 (stat)","pl");
@@ -1120,22 +1521,39 @@ void plot_data_ann() {
    lsc4->AddEntry(bgr,"reco, hist90 (stat)","pl");
    lsc4->AddEntry(dgr,"dnn, hist90 (stat)","pl");
 
-   TLegend *lsc5 = new TLegend(0.55,0.62,0.90,0.92);
-   lsc5->AddEntry(bgr,"reco w.r.t dnn, hist90 (stat)","pl");
-//   lsc5->AddEntry(dgr,"mc vs ann, hist90 (stat)","pl");
+//   TLegend *lsc5 = new TLegend(0.55,0.62,0.90,0.92);
+//   lsc5->AddEntry(bgr,"reco w.r.t dnn, hist90 (stat)","pl");
+//   lsc5->AddEntry(dgr,"reco w.r.t dnn, hist90 (stat)","pl");
 
-   TLegend *lsc6 = new TLegend(0.55,0.62,0.90,0.92);
-   lsc6->AddEntry(bgr,"reco w.r.t dnn, hist90 (stat)","pl");
-//   lsc6->AddEntry(dgr,"mc vs ann, hist90 (stat)","pl");
+//   TLegend *lsc6 = new TLegend(0.55,0.62,0.90,0.92);
+//   lsc6->AddEntry(bgr,"reco w.r.t dnn, hist90 (stat)","pl");
+//   lsc6->AddEntry(dgr,"reco w.r.t dnn, hist90 (stat)","pl");
    
 //   TLegend *lsc7 = new TLegend(0.55,0.62,0.90,0.92);
-//   lsc7->AddEntry(bgr,"mc, hist90 (stat)","pl");
-//   lsc7->AddEntry(dgr,"ann, hist90 (stat)","pl");
+//   lsc7->AddEntry(bgr,"reco, hist90 (stat)","pl");
+//   lsc7->AddEntry(dgr,"dnn, hist90 (stat)","pl");
 
 //   TLegend *lsc8 = new TLegend(0.55,0.62,0.90,0.92);
-//   lsc8->AddEntry(bgr,"mc, hist90 (stat)","pl");
-//   lsc8->AddEntry(dgr,"ann, hist90 (stat)","pl");
+//   lsc8->AddEntry(bgr,"reco, hist90 (stat)","pl");
+//   lsc8->AddEntry(dgr,"dnn, hist90 (stat)","pl");
 
+/*   TLegend *lsc13 = new TLegend(0.55,0.62,0.90,0.92);
+   lsc13->AddEntry(bgr,"reco, hist90 (stat)","pl");
+   lsc13->AddEntry(dgr,"dnn, hist90 (stat)","pl");
+
+   TLegend *lsc14 = new TLegend(0.55,0.62,0.90,0.92);
+   lsc14->AddEntry(bgr,"reco, hist90 (stat)","pl");
+   lsc14->AddEntry(dgr,"dnn, hist90 (stat)","pl");
+
+   TLegend *lsc15 = new TLegend(0.55,0.62,0.90,0.92);
+   lsc15->AddEntry(bgr,"reco, hist90 (stat)","pl");
+   lsc15->AddEntry(dgr,"dnn, hist90 (stat)","pl");
+
+   TLegend *lsc16 = new TLegend(0.55,0.62,0.90,0.92);
+   lsc16->AddEntry(bgr,"reco, hist90 (stat)","pl");
+   lsc16->AddEntry(dgr,"dnn, hist90 (stat)","pl");
+*/
+    
    c1->cd();
    lsc1->Draw();
    c2->cd();
@@ -1144,39 +1562,61 @@ void plot_data_ann() {
    lsc3->Draw();
    c4->cd();
    lsc4->Draw();
-   c5->cd();
-   lsc5->Draw();
-   c6->cd();
-   lsc6->Draw();
+//   c5->cd();
+//   lsc5->Draw();
+//   c6->cd();
+//   lsc6->Draw();
 //   c7->cd();
 //   lsc7->Draw();
 //   c8->cd();
 //   lsc8->Draw();
-/*
+    
+   auto rp_lin1 = new TRatioPlot(hist_lin1, hist1_lin1);
+   auto rp_lin2 = new TRatioPlot(hist_lin1, hist1_lin1);
+   auto rp_abs = new TRatioPlot(hist_abs, hist1_abs);
+   auto rp_rel = new TRatioPlot(hist_rel, hist1_rel);
+
    c7->cd();
    hist1_lin1->SetLineColor(kRed);
    hist1_lin1 -> Draw();
    hist_lin1 -> Draw("SAME");
+   rp_lin1 -> Draw("SAME");
+   c7->Update();
 
    c8->cd();
    hist_lin2 -> Draw();
    hist1_lin2->SetLineColor(kRed);
    hist1_lin2 -> Draw("SAME");
+   rp_lin2 -> Draw("SAME");
+   c8->Update();
 
    c9->cd();
    hist1_abs->SetLineColor(kRed);
    hist1_abs -> Draw();
    hist_abs -> Draw("SAME");
+   rp_abs -> Draw("SAME");
+   c9->Update();
 
    c10->cd();
    hist_rel -> Draw();
    hist1_rel->SetLineColor(kRed);
    hist1_rel -> Draw("SAME");
+   rp_rel -> Draw("SAME");
+   c10->Update();
 
-   c11->cd();
-   hist_abs_dif1 -> Draw();
+//   c11->cd();
+//   hist_abs_dif1 -> Draw();
 
-   c12->cd();
-   hist_abs_dif2 -> Draw();
-*/
+//   c12->cd();
+//   hist_abs_dif2 -> Draw();
+
+//   c13->cd();
+//   lsc13->Draw();
+//   c14->cd();
+//   lsc14->Draw();
+//   c15->cd();
+//   lsc15->Draw();
+//   c16->cd();
+//   lsc16->Draw();
+
 }

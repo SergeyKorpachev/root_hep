@@ -1452,9 +1452,9 @@ void fit_ann( const int fenergy = 5, const int nBins = 1000 ) {
 
 void fit_data_ann( const int bins = 1000 ) {
 
-  int mass[] = { 1, 2, 3, 4, 5, 7, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 90, 120 };
+  int mass[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 120 };
 //  int mass[] = { 5, 10, 15, 20, 25, 30, 40, 50, 60 };
-  int dim = 19; // 9
+  int dim = 29; // 9
 
   for (int i = 0; i < dim; i++ ) {
       fit_data( mass[ i ], bins );
