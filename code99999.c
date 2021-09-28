@@ -1,6 +1,6 @@
 void code() {
     
-    Float_t sum = 0.0;
+    _t sum = 0.0;
     
     FILE *file1 = fopen("test.txt", "r");
     if (!(lfile1, "%E\n", &weights[i]);
